@@ -27,8 +27,8 @@ Steps to Run Locally
 - Clone the repository:
 
 ````bash
-git clone https://github.com/your-username/nasa-image-gallery.git
-cd nasa-image-gallery
+git clone https://github.com/erick-marro/nasa-photo-app.git
+cd nasa-photo-app
 ````
 
 ### Build and run the Docker container:
