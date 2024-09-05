@@ -1,0 +1,148 @@
+
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .back-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .user-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  .contact-btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: var(--accent-color);
+  }
+  
+  .title {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .view-toggle button {
+    background: none;
+    border: 1px solid #0054e9;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-toggle button.active {
+    background-color: var(--primary-color);
+    color: #0054e9;
+  }
+  
+  .grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .loading {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+  .no-images {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+  }
+  
+  .image-card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar input {
+    padding: 0.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--accent-color);
+    width: 300px;
+    margin-right: 1rem;
+  }
+  
+  .search-bar button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background: darken(var(--primary-color), 10%);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .grid-view {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-view {
+      grid-template-columns: 1fr;
+    }
+  }
+  

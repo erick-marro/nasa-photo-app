@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Nasa API Photos</h1>
+  <br>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for images..." [(ngModel)]="searchQuery" (keyup.enter)="searchImages()">
+    <button (click)="searchImages()">Search</button>
+  </div>
+  <br>
+  <div class="view-toggle">
+    <button (click)="loadImages('popular')" [class.active]="viewMode === 'popular'">Popular</button>
+    <button (click)="loadImages('trending')" [class.active]="viewMode === 'trending'">Trending</button>
+  </div>
+
+  <div *ngIf="media.length > 0" class="grid-view">
+    <div class="image-card" *ngFor="let image of media">
+      <img *ngIf="image.links" [src]="image.links[0].href" alt="Photo">
+    </div>
+  </div>
+
+  <div *ngIf="media.length === 0" class="no-images">
+    Loading...
+  </div>
+</div>

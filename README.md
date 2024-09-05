@@ -1,142 +1,90 @@
-# [ORIGEN](http://www.origencorp.net/) - ANGULAR Nasa Technical Test ✍️
+# NASA Image Gallery - Angular Technical Test
 
-  
+This project is a simple NASA image and video gallery, built as part of a front-end developer technical test for ORIGEN. The app allows users to browse images and videos from NASA's public API, showing trending and popular media as well as allowing users to search for specific content.
+Project Overview
 
-This test is part of ORIGEN's hiring process for a front-end angular developer position. Once you got acces to this repository, follow the next step-by-step local instalation´s process:  
+- Framework: Angular (v12)
+- Docker: Set up to avoid downgrading Node.js from version 20 (using Node.js 12.14.1 in Docker container)
+- NASA API: Integrated to fetch images and videos from the NASA public API.
+- Features:
+  - Display popular and trending images and videos
+  - Search functionality to search for images or videos
+        Responsive design
 
-> Install [NodeJS 12.14.1](https://nodejs.org/es/download/releases/)
+## Setup Instructions
 
-  
+To run this project locally, follow these steps:
+Prerequisites
 
-> Install [Angular CLI version 12.0.0](https://www.npmjs.com/package/@angular/cli/v/12.0.0)
+Ensure you have the following installed:
 
-  
+- Docker: Required to run the project due to the specified Node.js version.
+- Git: To clone the repository.
+- Any code editor: Recommended Visual Studio Code.
 
-> Install [Visual Studio Code](https://code.visualstudio.com/download) or you favorite code editor
+Steps to Run Locally
 
-  
+- Clone the repository:
 
-> Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+````bash
+git clone https://github.com/your-username/nasa-image-gallery.git
+cd nasa-image-gallery
+````
 
-  
+### Build and run the Docker container:
 
-> Verify all has been install successfully with `ng version` in console [Verification Example](https://i.stack.imgur.com/wj5fz.png)
+Since the project requires Node.js 12.14.1 and you may have a different version (e.g., Node.js 20), Docker is used to maintain the correct environment.
 
-  
+To set up and run the project, use the following commands:
 
-> Clone this repository in local
+````bash
+    docker-compose up --build
+````
+This will:
+    Build the Docker image with the correct Node.js version (12.14.1).
+    Install all necessary dependencies inside the container.
+    Launch the development server.
 
-  
+### Access the application:
 
-> Run `npm install` in order to get all this project´s dependecies
+After the container is up and running, you can access the application by visiting http://localhost:4200 in your web browser.
 
-  
-  
+### Additional Commands
 
-## Objective 🎯
+Stop the Docker container:
 
-  
+````bash
+docker-compose down
+````
 
-The goal of this technical test is to code a **National Aeronautics and Space Administration** - **NASA** footage website. It will require you to read, understand and implement the API´s NASA, and create a basic user interface to present the data.
+### Rebuild the Docker image:
 
-  
+If you make changes to the Docker configuration or package dependencies, rebuild the container with:
 
-  
+````bash
+docker-compose up --build
+````
 
-## Structure 🛠️
+### Using the Application
 
-  
+The home page displays a toggle between popular and trending images/videos.
+You can use the search bar to look for specific content from the NASA API.
+The layout is responsive and optimized for modern browsers.
 
-In this repository's **master** branch you are provided with a clean architechture modular-based boilerplate that allows you to quickly start developing your app in Angular. As advice, we recommend to follow project´s structure and build on modular-based, if modular-based is kind of complex for you ,then, feel free to change and build as you want.
+### Project Code
+I created a module called ````photos```` there is all the application logic-
 
-  
-You must install any library or dependecie you want to use with **npm** please avoid using CDN´s.
+For more information, check out the NASA API documentation.
 
-Everything related to logos, icons and fonts must be downloaded and used from the `/assets` folder within the project, feel free to use either boostrap, angular material, tailwind, SASS, LESS as CSS frameworks or if you want use pure CSS.
+## Technologies Used
 
-  
+- Angular 12
+- Node.js 12.14.1 (via Docker)
+- Docker (to manage Node.js environment)
+- SCSS for styling
 
-## API 🔗
+## Why Docker?
 
-  
+Since my local Node.js version is 20.x, I used Docker to avoid downgrading my Node.js installation. The Docker environment provides Node.js 12.14.1, which is required by this project.
 
-The **NASA - api** contains all images and videos you will be using, so please, don´t implement or use another API or external footage source. For more convenience, you can [check out the NASA-API documentation here](https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf).
-
-  
-
-From your code, you can access to the API at `https://images-api.nasa.gov/` or `https://images-assets.nasa.gov` as a main URL and as hint you can use:
-
-
-  
-
--  `/recent.json`
-
--  `/popular.json`
-
--  `/search?q=earth&page=1&media_type=image,video,audio&year_start=1935&year_end=1980`
-
-  
-
-## What we're expecting 🕵️
-
-  
-
-We expect your code to work without bugs and implement the following features:
-
-  
-
-- Display recent images and videos
-
-- Display popular images and videos
-
-- Show detail of images
-  
-
-You can check this [NASA Website](https://images.nasa.gov/) to have an idea.
-
-  
-
-We also expect your code to be a reflection of yourself at work, so we will be attentive to the choices you'll make regarding code architecture, readability and performance.
-
-  
-
-  
-
-## What we're not expecting 🚩
-
-  
-
-We suggest you don't spend too much time on your UI, we know how time intensive it can be. The same can be said for browser compatibility, just make sure your app works in one evergreen browser, like Chrome for instance. Make it simple and yours!
-  
-
-## Bonus features 🌟
-
-  
-
-If you have some time left and want to go a little bit further, here are some feature ideas you can add to this app:
-
-  
-- Search images and videos
-  
-- Filter images and videos
-
-- Login (Google)
-
-- Logout
-
-- Simple Profile
-
-- Wish List
-
-- Make the app responsive
-
-  
-
-## Submission ⌛
-
-Once you complete the test, push all the project to **your own repository and make it public** and send to us your repository link to nlara@origencorp.net or hello@origencorp.net before the time and deadline so that we can clone your project. We will later be scheduling the day and time to conduct the technical interview.
-
- 
-  
-
-## Now you are ready, Happy Coding! 👊😎
+By running the application in a container, it ensures that the development environment is consistent and aligned with the project requirements, without needing to modify your local setup.
