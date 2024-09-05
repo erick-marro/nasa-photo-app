@@ -81,7 +81,7 @@ For more information, check out the NASA API documentation.
 - Angular 12
 - Node.js 12.14.1 (via Docker)
 - Docker (to manage Node.js environment)
-- SCSS for styling
+- CSS for styling
 
 ## Why Docker?
 
